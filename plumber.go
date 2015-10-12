@@ -1,9 +1,9 @@
 /*
 
-What you do:
+Desired process:
 1. Define Individual functions (with parameters)
-2, BIG ASSUMPTION : functions are of type f(string) string
-3. in, out := plumber.Pipeline(funcA, funcB, funcC)
+2, BIG ASSUMPTION : functions are of type f([]byte) []byte
+3. get in and out channels from plumber.Pipeline(funcA, funcB, funcC)
 4. Start putting things in "in"
 5. Start extracting things from "out"
 
