@@ -11,11 +11,13 @@ Desired process:
 
 package plumber
 
-type unitT byte //TODO: Lots and lots of reflection ahead!
-type streamT []unitT
-type inChanT chan streamT //TODO: support for buffers TODO: Enforce directions
-type outChanT chan streamT
-type funcT func(streamT) streamT
+type (
+	unitT    byte //TODO: Lots and lots of reflection ahead!
+	streamT  []unitT
+	inChanT  chan streamT //TODO: support for buffers TODO: Enforce directions
+	outChanT chan streamT
+	funcT    func(streamT) streamT
+)
 
 type pipeline struct {
 	in    inChanT
